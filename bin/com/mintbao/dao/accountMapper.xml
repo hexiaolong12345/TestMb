@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mintbao.dao.AccountDao">
+	<resultMap type="com.mintbao.bean.Account" id="AccountMap">
+		<id property="id" javaType="java.lang.Integer" column="id"/>
+		<result property="thirdAccountIds" javaType="java.lang.Integer" column="third_account_ids"/>
+	</resultMap>
+	<select id="selectAll" resultMap="AccountMap" >
+		select * from account
+	</select>
+</mapper>
